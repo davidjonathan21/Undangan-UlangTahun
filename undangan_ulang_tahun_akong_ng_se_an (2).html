@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Syukuran Ulang Tahun Ke-80 Akong Ng Se An</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Noto Serif SC untuk nuansa Oriental Hanzi & Montserrat untuk teks Latin yang Elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Animate.css untuk animasi masuk -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chinese: {
+                            red: '#AA0000',
+                            redDark: '#440000',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#AA7C11',
+                            dark: '#0e0202',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        oriental: ['Noto Serif SC', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Desain Latar Belakang Tekstur Awan Oriental Tradisional Seamless & Transparan */
+        body {
+            background-color: #0e0202;
+            position: relative;
+        }
+
+        /* Pseudo-element untuk background pattern awan agar bisa dikontrol opacity & warnanya secara terpisah */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://thumbs.dreamstime.com/b/seamless-traditional-cloud-chinese-pattern-design-vector-76729303.jpg');
+            background-repeat: repeat;
+            background-size: 280px 280px; /* Ukuran seamless repeat yang presisi */
+            opacity: 0.05; 
+            z-index: -1;
+            pointer-events: none;
+            /* Filter sepia + hue-rotate untuk memberikan efek warna merah & emas yang menyatu dengan tema */
+            filter: sepia(1) saturate(6) hue-rotate(335deg) contrast(1.1);
+        }
+
+        /* Desain Border Oriental Ornamental */
+        .oriental-border {
+            position: relative;
+            border: 3px double #D4AF37;
+        }
+        .oriental-border::before, .oriental-border::after {
+            content: "🏮";
+            position: absolute;
+            font-size: 1.5rem;
+            color: #D4AF37;
+        }
+        .oriental-border::before { top: -15px; left: -10px; }
+        .oriental-border::after { bottom: -15px; right: -10px; }
+
+        /* Corner ornaments ala Dinasti Han */
+        .corner-ornament {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #D4AF37;
+        }
+        .top-left { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+        .top-right { top: 8px; right: 8px; border-left: none; border-bottom: none; }
+        .bottom-left { bottom: 8px; left: 8px; border-right: none; border-top: none; }
+        .bottom-right { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+        /* Parallax Ringan */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Efek Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Dekorasi Awan Tradisional Tiongkok (Simbol Keberuntungan) */
+        .chinese-cloud {
+            background: radial-gradient(ellipse at bottom, rgba(212, 175, 55, 0.2), transparent 60%);
+        }
+
+        /* Animasi Mengayun untuk Lampion Samping Countdown */
+        @keyframes sway {
+            0%, 100% { transform: rotate(-6deg); }
+            50% { transform: rotate(6deg); }
+        }
+        .animate-sway {
+            animation: sway 3s ease-in-out infinite;
+            transform-origin: top center;
+        }
+
+        /* Efek Kilau Emas Premium */
+        .gold-shimmer {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-slate-100 min-h-screen overflow-x-hidden selection:bg-chinese-gold selection:text-chinese-dark">
+
+    <!-- GATEWAY PEMBUKA (COVER OVERLAY) -->
+    <div id="welcome-gate" class="fixed inset-0 z-[100] flex flex-col items-center justify-center text-center p-6 bg-chinese-dark transition-all duration-1000 ease-in-out">
+        <!-- Dekorasi Awan Belakang Gate -->
+        <div class="absolute inset-0 opacity-10 bg-repeat bg-center pointer-events-none" style="background-image: url('https://thumbs.dreamstime.com/b/seamless-traditional-cloud-chinese-pattern-design-vector-76729303.jpg'); background-size: 200px;"></div>
+        
+        <!-- Frame Elegant -->
+        <div class="absolute inset-6 border border-chinese-gold/30 pointer-events-none"></div>
+        <div class="absolute inset-8 border-2 border-chinese-gold/15 pointer-events-none"></div>
+        
+        <div class="relative z-10 max-w-lg mx-auto space-y-6">
+            <!-- Karakter Panjang Umur -->
+            <div class="text-chinese-gold text-7xl md:text-8xl font-oriental drop-shadow-[0_4px_12px_rgba(212,175,55,0.4)] animate__animated animate__zoomIn">壽</div>
+            
+            <div class="space-y-2">
+                <p class="text-chinese-goldLight uppercase tracking-[0.25em] text-xs md:text-sm font-semibold">Undangan Digital</p>
+                <h1 class="font-oriental text-3xl md:text-4xl font-bold text-white">八十岁生日庆典!</h1>
+                <p class="text-lg md:text-xl font-semibold text-chinese-gold">Ulang Tahun ke-80 Akong (Ng Se An)</p>
+            </div>
+            
+            <!-- Penerima Undangan -->
+            <div class="bg-chinese-redDark/40 backdrop-blur-sm border border-chinese-gold/25 rounded-2xl p-4 my-6">
+                <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <p id="guest-name" class="text-base md:text-lg font-bold text-chinese-goldLight">Tamu Undangan Terhormat</p>
+            </div>
+
+            <!-- Tombol Buka Undangan -->
+            <button id="btn-open-invitation" onclick="openInvitation()" class="bg-gradient-to-r from-chinese-goldDark via-chinese-gold to-chinese-goldDark hover:from-chinese-gold hover:to-chinese-goldLight text-chinese-dark font-extrabold text-sm md:text-base uppercase tracking-widest py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 duration-300 flex items-center justify-center gap-2 mx-auto cursor-pointer animate__animated animate__pulse animate__infinite">
+                <span>🏮 Buka Undangan 🏮</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- YouTube Iframe Player (Elemen Tersembunyi untuk Backsound) -->
+    <div id="ytPlayer" class="hidden"></div>
+
+    <!-- Tombol Kontrol Musik Mengambang -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-chinese-gold hover:bg-chinese-goldLight text-chinese-dark rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-110 active:scale-95 focus:outline-none">
+            <i id="musicIcon" class="fa-solid fa-music text-lg"></i>
+        </button>
+    </div>
+
+    <!-- HERO SECTION (Parallax Ringan & Tanpa Foto di Kiri Kanan) -->
+    <header class="relative min-h-screen flex items-center justify-center text-center p-6 overflow-hidden parallax-bg" style="background-image: linear-gradient(rgba(14, 2, 2, 0.9), rgba(14, 2, 2, 0.75)), url('https://images.unsplash.com/photo-1508004526068-462737ad2f3f?q=80&w=1920&auto=format&fit=crop');">
+        <!-- Bingkai Emas Hero -->
+        <div class="absolute inset-4 md:inset-10 border border-chinese-gold/30 pointer-events-none"></div>
+        <div class="absolute inset-5 md:inset-12 border-2 border-chinese-gold/15 pointer-events-none"></div>
+
+        <!-- Aksen Awan Tradisional Atas & Bawah -->
+        <div class="absolute top-0 inset-x-0 h-40 chinese-cloud rotate-180 opacity-50"></div>
+        <div class="absolute bottom-0 inset-x-0 h-40 chinese-cloud opacity-50"></div>
+
+        <!-- ORNAMEN GANTUNGAN EMAS ORIENTAL (KIRI) -->
+        <div class="hidden lg:block absolute left-6 xl:left-16 top-1/2 -translate-y-1/2 w-40 xl:w-48 h-[500px] opacity-90 pointer-events-none animate__animated animate__fadeInLeft z-0">
+            <svg viewBox="0 0 150 500" class="w-full h-full drop-shadow-[0_8px_16px_rgba(212,175,55,0.4)]">
+                <!-- Golden hanging thread -->
+                <line x1="75" y1="0" x2="75" y2="60" stroke="#D4AF37" stroke-width="3" stroke-dasharray="1 3"/>
+                
+                <!-- Cloud Ornament/Bracket at top -->
+                <path d="M 50,60 C 35,50 20,65 35,80 C 45,85 55,80 60,75 C 65,80 75,85 85,80 C 100,65 85,50 70,60 C 70,55 60,55 50,60 Z" fill="#D4AF37" opacity="0.95"/>
+                <path d="M 45,63 C 50,58 55,58 60,63" stroke="#F3E5AB" stroke-width="1.5" fill="none"/>
+                <circle cx="75" cy="40" r="5" fill="#AA0000"/>
+                
+                <!-- Descending cord -->
+                <line x1="75" y1="80" x2="75" y2="130" stroke="#D4AF37" stroke-width="3"/>
+                <circle cx="75" cy="105" r="7" fill="#AA0000" stroke="#D4AF37" stroke-width="1.5"/>
+                
+                <!-- Traditional Chinese Knot (Pan Chang Knot) -->
+                <rect x="55" y="130" width="40" height="40" rx="4" fill="#AA0000" stroke="#D4AF37" stroke-width="3" transform="rotate(45 75 150)"/>
+                <path d="M 57,150 L 93,150 M 75,132 L 75,168" stroke="#D4AF37" stroke-width="2"/>
+                <path d="M 50,150 C 35,135 35,165 50,150" stroke="#D4AF37" stroke-width="3" fill="none"/>
+                <path d="M 100,150 C 115,135 115,165 100,150" stroke="#D4AF37" stroke-width="3" fill="none"/>
+                <path d="M 75,125 C 60,110 90,110 75,125" stroke="#D4AF37" stroke-width="3" fill="none"/>
+                <path d="M 75,175 C 60,190 90,190 75,175" stroke="#D4AF37" stroke-width="3" fill="none"/>
+
+                <!-- Connecting bead -->
+                <circle cx="75" cy="205" r="8" fill="#AA0000" stroke="#D4AF37" stroke-width="1.5"/>
+                <line x1="75" y1="213" x2="75" y2="245" stroke="#D4AF37" stroke-width="3"/>
+
+                <!-- Gold Fortune Coin 1 -->
+                <circle cx="75" cy="275" r="30" fill="url(#goldGradient)" stroke="#AA7C11" stroke-width="2"/>
+                <rect x="65" y="265" width="20" height="20" fill="#0e0202" stroke="#AA7C11" stroke-width="2"/>
+                <circle cx="75" cy="275" r="25" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="2 2"/>
+                <text x="75" y="257" fill="#AA7C11" font-size="10" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">招</text>
+                <text x="75" y="300" fill="#AA7C11" font-size="10" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">宝</text>
+                <text x="53" y="278" fill="#AA7C11" font-size="10" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">财</text>
+                <text x="97" y="278" fill="#AA7C11" font-size="10" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">进</text>
+
+                <!-- Connection bead 2 -->
+                <line x1="75" y1="305" x2="75" y2="340" stroke="#D4AF37" stroke-width="3"/>
+                <circle cx="75" cy="330" r="7" fill="#AA0000" stroke="#D4AF37" stroke-width="1.5"/>
+
+                <!-- Gold Fortune Coin 2 (Smaller) -->
+                <circle cx="75" cy="375" r="22" fill="url(#goldGradient)" stroke="#AA7C11" stroke-width="2"/>
+                <rect x="68" y="368" width="14" height="14" fill="#0e0202" stroke="#AA7C11" stroke-width="1.5"/>
+                <text x="75" y="362" fill="#AA7C11" font-size="8" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">吉</text>
+                <text x="75" y="394" fill="#AA7C11" font-size="8" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">祥</text>
+
+                <!-- Tassel cap & flowing threads -->
+                <line x1="75" y1="397" x2="75" y2="430" stroke="#D4AF37" stroke-width="3"/>
+                <!-- Tassel Cap -->
+                <path d="M 60,430 L 90,430 L 85,445 L 65,445 Z" fill="#AA0000" stroke="#D4AF37" stroke-width="1.5"/>
+                <!-- Flowing Tassel Lines -->
+                <path d="M 62,445 L 62,500 M 66,445 L 66,500 M 70,445 L 70,500 M 75,445 L 75,500 M 80,445 L 80,500 M 84,445 L 84,500 M 88,445 L 88,500" stroke="#AA0000" stroke-width="2"/>
+                <path d="M 68,445 L 68,500 M 73,445 L 73,500 M 78,445 L 78,500 M 82,445 L 82,500" stroke="#D4AF37" stroke-width="1" opacity="0.8"/>
+
+                <!-- Gradients defs -->
+                <defs>
+                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#F3E5AB"/>
+                        <stop offset="50%" stop-color="#D4AF37"/>
+                        <stop offset="100%" stop-color="#AA7C11"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- ORNAMEN GANTUNGAN EMAS ORIENTAL (KANAN) -->
+        <div class="hidden lg:block absolute right-6 xl:right-16 top-1/2 -translate-y-1/2 w-40 xl:w-48 h-[500px] opacity-90 pointer-events-none animate__animated animate__fadeInRight z-0">
+            <svg viewBox="0 0 150 500" class="w-full h-full drop-shadow-[0_8px_16px_rgba(212,175,55,0.4)]">
+                <!-- Golden hanging thread -->
+                <line x1="75" y1="0" x2="75" y2="60" stroke="#D4AF37" stroke-width="3" stroke-dasharray="1 3"/>
+                
+                <!-- Cloud Ornament/Bracket at top -->
+                <path d="M 50,60 C 35,50 20,65 35,80 C 45,85 55,80 60,75 C 65,80 75,85 85,80 C 100,65 85,50 70,60 C 70,55 60,55 50,60 Z" fill="#D4AF37" opacity="0.95"/>
+                <path d="M 45,63 C 50,58 55,58 60,63" stroke="#F3E5AB" stroke-width="1.5" fill="none"/>
+                <circle cx="75" cy="40" r="5" fill="#AA0000"/>
+                
+                <!-- Descending cord -->
+                <line x1="75" y1="80" x2="75" y2="130" stroke="#D4AF37" stroke-width="3"/>
+                <circle cx="75" cy="105" r="7" fill="#AA0000" stroke="#D4AF37" stroke-width="1.5"/>
+                
+                <!-- Traditional Chinese Knot (Pan Chang Knot) -->
+                <rect x="55" y="130" width="40" height="40" rx="4" fill="#AA0000" stroke="#D4AF37" stroke-width="3" transform="rotate(45 75 150)"/>
+                <path d="M 57,150 L 93,150 M 75,132 L 75,168" stroke="#D4AF37" stroke-width="2"/>
+                <path d="M 50,150 C 35,135 35,165 50,150" stroke="#D4AF37" stroke-width="3" fill="none"/>
+                <path d="M 100,150 C 115,135 115,165 100,150" stroke="#D4AF37" stroke-width="3" fill="none"/>
+                <path d="M 75,125 C 60,110 90,110 75,125" stroke="#D4AF37" stroke-width="3" fill="none"/>
+                <path d="M 75,175 C 60,190 90,190 75,175" stroke="#D4AF37" stroke-width="3" fill="none"/>
+
+                <!-- Connecting bead -->
+                <circle cx="75" cy="205" r="8" fill="#AA0000" stroke="#D4AF37" stroke-width="1.5"/>
+                <line x1="75" y1="213" x2="75" y2="245" stroke="#D4AF37" stroke-width="3"/>
+
+                <!-- Gold Fortune Coin 1 -->
+                <circle cx="75" cy="275" r="30" fill="url(#goldGradientRight)" stroke="#AA7C11" stroke-width="2"/>
+                <rect x="65" y="265" width="20" height="20" fill="#0e0202" stroke="#AA7C11" stroke-width="2"/>
+                <circle cx="75" cy="275" r="25" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="2 2"/>
+                <text x="75" y="257" fill="#AA7C11" font-size="10" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">招</text>
+                <text x="75" y="300" fill="#AA7C11" font-size="10" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">宝</text>
+                <text x="53" y="278" fill="#AA7C11" font-size="10" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">财</text>
+                <text x="97" y="278" fill="#AA7C11" font-size="10" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">进</text>
+
+                <!-- Connection bead 2 -->
+                <line x1="75" y1="305" x2="75" y2="340" stroke="#D4AF37" stroke-width="3"/>
+                <circle cx="75" cy="330" r="7" fill="#AA0000" stroke="#D4AF37" stroke-width="1.5"/>
+
+                <!-- Gold Fortune Coin 2 (Smaller) -->
+                <circle cx="75" cy="375" r="22" fill="url(#goldGradientRight)" stroke="#AA7C11" stroke-width="2"/>
+                <rect x="68" y="368" width="14" height="14" fill="#0e0202" stroke="#AA7C11" stroke-width="1.5"/>
+                <text x="75" y="362" fill="#AA7C11" font-size="8" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">吉</text>
+                <text x="75" y="394" fill="#AA7C11" font-size="8" font-family="Noto Serif SC" font-weight="bold" text-anchor="middle">祥</text>
+
+                <!-- Tassel cap & flowing threads -->
+                <line x1="75" y1="397" x2="75" y2="430" stroke="#D4AF37" stroke-width="3"/>
+                <!-- Tassel Cap -->
+                <path d="M 60,430 L 90,430 L 85,445 L 65,445 Z" fill="#AA0000" stroke="#D4AF37" stroke-width="1.5"/>
+                <!-- Flowing Tassel Lines -->
+                <path d="M 62,445 L 62,500 M 66,445 L 66,500 M 70,445 L 70,500 M 75,445 L 75,500 M 80,445 L 80,500 M 84,445 L 84,500 M 88,445 L 88,500" stroke="#AA0000" stroke-width="2"/>
+                <path d="M 68,445 L 68,500 M 73,445 L 73,500 M 78,445 L 78,500 M 82,445 L 82,500" stroke="#D4AF37" stroke-width="1" opacity="0.8"/>
+
+                <!-- Gradients defs -->
+                <defs>
+                    <linearGradient id="goldGradientRight" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#F3E5AB"/>
+                        <stop offset="50%" stop-color="#D4AF37"/>
+                        <stop offset="100%" stop-color="#AA7C11"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- Konten Utama Hero -->
+        <div class="relative z-10 max-w-3xl px-4">
+            <!-- Karakter Hanzi Simbol Keberuntungan / Kemakmuran Shòu (Panjang Umur) -->
+            <div class="text-chinese-gold text-7xl md:text-8xl lg:text-9xl font-oriental mb-4 drop-shadow-[0_4px_12px_rgba(212,175,55,0.4)]">壽</div>
+            
+            <p class="text-chinese-goldLight uppercase tracking-[0.25em] text-sm md:text-lg font-bold mb-3">Jamuan Makan Meja Keluarga Besar</p>
+            
+            <h1 class="font-oriental text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide text-white drop-shadow-lg mb-4">
+                八十岁生日庆典!
+            </h1>
+            
+            <p class="text-2xl md:text-4xl font-semibold text-chinese-gold tracking-wide mb-8 drop-shadow">
+                Ulang Tahun ke-80 Akong (Ng Se An)
+            </p>
+
+            <!-- Garis Hias Pembatas -->
+            <div class="flex items-center justify-center gap-4 mb-8">
+                <span class="h-[1px] w-16 bg-gradient-to-r from-transparent to-chinese-gold"></span>
+                <span class="text-chinese-gold text-lg">🏮 囍 🏮</span>
+                <span class="h-[1px] w-16 bg-gradient-to-l from-transparent to-chinese-gold"></span>
+            </div>
+
+            <!-- HITUNG MUNDUR (Dengan Lampion Kecil di Sisi Kiri-Kanan Angka) -->
+            <div class="bg-chinese-redDark/45 backdrop-blur-md border border-chinese-gold/30 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto shadow-2xl relative">
+                <p class="text-xs md:text-sm text-chinese-goldLight font-medium tracking-widest uppercase mb-4">Menghitung Hari Bahagia:</p>
+                
+                <div class="flex items-center justify-center gap-3 md:gap-6">
+                    <!-- Lampion Kiri -->
+                    <div class="animate-sway text-2xl md:text-4xl filter drop-shadow-[0_2px_5px_rgba(212,175,55,0.5)]">
+                        🏮
+                    </div>
+
+                    <!-- Grid Angka Countdown -->
+                    <div class="grid grid-cols-4 gap-2 md:gap-4 text-center flex-grow max-w-lg">
+                        <div class="bg-chinese-dark/90 rounded-xl p-2.5 md:p-3 border border-chinese-gold/25">
+                            <span id="countdown-days" class="block text-xl md:text-4xl font-bold text-chinese-gold">00</span>
+                            <span class="text-[9px] md:text-xs uppercase tracking-wider text-slate-300">Hari</span>
+                        </div>
+                        <div class="bg-chinese-dark/90 rounded-xl p-2.5 md:p-3 border border-chinese-gold/25">
+                            <span id="countdown-hours" class="block text-xl md:text-4xl font-bold text-chinese-gold">00</span>
+                            <span class="text-[9px] md:text-xs uppercase tracking-wider text-slate-300">Jam</span>
+                        </div>
+                        <div class="bg-chinese-dark/90 rounded-xl p-2.5 md:p-3 border border-chinese-gold/25">
+                            <span id="countdown-minutes" class="block text-xl md:text-4xl font-bold text-chinese-gold">00</span>
+                            <span class="text-[9px] md:text-xs uppercase tracking-wider text-slate-300">Menit</span>
+                        </div>
+                        <div class="bg-chinese-dark/90 rounded-xl p-2.5 md:p-3 border border-chinese-gold/25">
+                            <span id="countdown-seconds" class="block text-xl md:text-4xl font-bold text-chinese-gold">00</span>
+                            <span class="text-[9px] md:text-xs uppercase tracking-wider text-slate-300">Detik</span>
+                        </div>
+                    </div>
+
+                    <!-- Lampion Kanan -->
+                    <div class="animate-sway text-2xl md:text-4xl filter drop-shadow-[0_2px_5px_rgba(212,175,55,0.5)]">
+                        🏮
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Navigasi Bawah -->
+            <div class="mt-12 animate-bounce">
+                <a href="#tentang-acara" class="text-chinese-goldLight hover:text-chinese-gold text-sm font-semibold tracking-widest uppercase flex flex-col items-center gap-2">
+                    Detail Acara
+                    <i class="fa-solid fa-chevron-down text-base"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION DETAIL ACARA -->
+    <section id="tentang-acara" class="relative py-24 px-6 md:px-12 max-w-5xl mx-auto z-10">
+        <div class="reveal text-center mb-16">
+            <span class="text-chinese-gold text-xs uppercase tracking-[0.3em] font-semibold block mb-2">— Rincian Jamuan Kasih —</span>
+            <h2 class="font-oriental text-3xl md:text-5xl font-bold text-chinese-gold drop-shadow-md">Waktu & Tempat</h2>
+            <div class="w-24 h-1 bg-chinese-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            
+            <!-- Card Waktu -->
+            <div class="reveal bg-chinese-dark/70 border-2 border-chinese-gold/30 rounded-2xl p-8 md:p-10 relative overflow-hidden flex flex-col justify-between shadow-xl">
+                <!-- Corner Decorations -->
+                <div class="corner-ornament top-left"></div><div class="corner-ornament top-right"></div>
+                <div class="corner-ornament bottom-left"></div><div class="corner-ornament bottom-right"></div>
+                
+                <div class="text-center md:text-left">
+                    <div class="w-16 h-16 bg-chinese-red/20 border border-chinese-gold/40 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
+                        <i class="fa-solid fa-calendar-check text-chinese-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-oriental text-2xl md:text-3xl font-bold text-chinese-gold mb-4">Hari & Tanggal</h3>
+                    <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-3">Minggu, 23 Agustus 2026</p>
+                    <p class="text-base md:text-xl text-slate-300">Waktu: <span class="font-semibold text-chinese-goldLight">17:00 WIB</span> - Selesai</p>
+                </div>
+                
+                <div class="border-t border-chinese-gold/15 pt-6 mt-6 text-center md:text-left">
+                    <p class="text-sm md:text-base text-chinese-goldLight italic">Kehadiran Bapak/Ibu sekalian merupakan kehormatan tak ternilai bagi keluarga kami.</p>
+                </div>
+            </div>
+
+            <!-- Card Lokasi -->
+            <div class="reveal bg-chinese-dark/70 border-2 border-chinese-gold/30 rounded-2xl p-8 md:p-10 relative overflow-hidden flex flex-col justify-between shadow-xl">
+                <!-- Corner Decorations -->
+                <div class="corner-ornament top-left"></div><div class="corner-ornament top-right"></div>
+                <div class="corner-ornament bottom-left"></div><div class="corner-ornament bottom-right"></div>
+                
+                <div class="text-center md:text-left">
+                    <div class="w-16 h-16 bg-chinese-red/20 border border-chinese-gold/40 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
+                        <i class="fa-solid fa-map-location-dot text-chinese-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-oriental text-2xl md:text-3xl font-bold text-chinese-gold mb-4">Lokasi Restoran</h3>
+                    
+                    <p class="text-2xl md:text-3xl mb-3">
+                        <a href="https://maps.app.goo.gl/4nJBuAWHdxR2eJN36" target="_blank" rel="noopener noreferrer" class="font-extrabold text-chinese-goldLight hover:text-chinese-gold underline decoration-chinese-gold transition-colors duration-300">
+                            Fortune Star Restaurant <i class="fa-solid fa-up-right-from-square text-sm ml-1 animate-pulse"></i>
+                        </a>
+                    </p>
+                    
+                    <p class="text-sm md:text-lg text-slate-300 leading-relaxed font-medium">
+                        Function Hall; Kota Tua, tepatnya di Jl. Kunir 2 No. 2, Pinangsia, Taman Sari, Jakarta Barat
+                    </p>
+                </div>
+                
+                <div class="pt-6 mt-6">
+                    <a href="https://maps.app.goo.gl/4nJBuAWHdxR2eJN36" target="_blank" rel="noopener noreferrer" class="w-full bg-chinese-red hover:bg-chinese-redDark text-white font-bold py-3.5 px-6 rounded-xl border border-chinese-gold/40 text-center block transition-all shadow-md transform hover:-translate-y-1">
+                        <i class="fa-solid fa-location-arrow mr-2"></i> Petunjuk Arah Google Maps
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION BUKU TAMU & RESERVASI -->
+    <section id="buku-tamu" class="relative py-24 px-6 md:px-12 bg-black/60 border-y border-chinese-gold/20">
+        <div class="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay" style="background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1000');"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto">
+            
+            <!-- Judul Section -->
+            <div class="reveal text-center mb-14">
+                <span class="text-chinese-gold text-xs uppercase tracking-[0.3em] font-semibold block mb-2">— R.S.V.P & Buku Tamu —</span>
+                <h2 class="font-oriental text-3xl md:text-5xl font-bold text-chinese-gold drop-shadow-md">Konfirmasi Kehadiran</h2>
+                <div class="w-24 h-1 bg-chinese-gold mx-auto mt-4"></div>
+                <p class="text-slate-300 text-sm md:text-lg mt-4 max-w-lg mx-auto font-medium">
+                    Mohon kesediaan Bapak/Ibu/Saudara untuk mengisi buku tamu di bawah ini.
+                </p>
+            </div>
+
+            <!-- PANEL STATISTIK (Mulai kosong / 0 bawaan) -->
+            <div class="reveal grid grid-cols-2 gap-4 max-w-xl mx-auto mb-10 text-center">
+                <div class="bg-chinese-redDark/25 backdrop-blur-md border border-emerald-500/30 rounded-2xl p-4 shadow-lg">
+                    <span class="block text-xs md:text-sm text-emerald-400 font-bold uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-circle-check mr-1.5"></i> Total Hadir
+                    </span>
+                    <span id="stat-hadir" class="text-2xl md:text-4xl font-extrabold text-white">0</span>
+                    <span class="text-[10px] text-slate-400 block mt-1">Konfirmasi Kedatangan</span>
+                </div>
+                <div class="bg-chinese-redDark/25 backdrop-blur-md border border-chinese-red/30 rounded-2xl p-4 shadow-lg">
+                    <span class="block text-xs md:text-sm text-rose-400 font-bold uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-circle-xmark mr-1.5"></i> Tidak Hadir
+                    </span>
+                    <span id="stat-absen" class="text-2xl md:text-4xl font-extrabold text-white">0</span>
+                    <span class="text-[10px] text-slate-400 block mt-1">Berhalangan Hadir</span>
+                </div>
+            </div>
+
+            <!-- CONTAINER UTAMA FORM (Desain Oriental, Transparan, Border Ornamental Merah & Emas) -->
+            <div class="reveal bg-chinese-dark/85 backdrop-blur-md border-2 border-chinese-red rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden max-w-2xl mx-auto">
+                <div class="absolute inset-2 border border-chinese-gold/20 rounded-2xl pointer-events-none"></div>
+                
+                <div class="corner-ornament top-left"></div><div class="corner-ornament top-right"></div>
+                <div class="corner-ornament bottom-left"></div><div class="corner-ornament bottom-right"></div>
+
+                <form id="rsvpForm" class="space-y-6 relative z-10">
+                    <!-- Form Group: Nama -->
+                    <div class="form-grup flex flex-col">
+                        <label for="namaTamu" class="text-sm font-semibold text-chinese-goldLight mb-2 flex items-center gap-2">
+                            <span>姓名</span> Nama Lengkap
+                        </label>
+                        <input type="text" id="namaTamu" required
+                            class="bg-chinese-dark/90 border border-chinese-gold/35 focus:border-chinese-gold text-white placeholder-slate-500 rounded-xl px-4 py-3.5 text-sm md:text-base outline-none transition-all duration-300 font-medium"
+                            placeholder="Tulis nama lengkap Anda...">
+                    </div>
+
+                    <!-- Form Group: Pilihan Kehadiran -->
+                    <div class="form-grup flex flex-col">
+                        <label class="text-sm font-semibold text-chinese-goldLight mb-3 flex items-center gap-2">
+                            <span>出席</span> Konfirmasi Kehadiran
+                        </label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Radio Hadir -->
+                            <label class="relative flex items-center justify-center p-4 bg-chinese-dark/95 border border-chinese-gold/30 rounded-xl cursor-pointer hover:bg-chinese-red/10 transition-all duration-300 group">
+                                <input type="radio" name="kehadiran" value="hadir" checked class="sr-only peer">
+                                <div class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-chinese-gold transition-all"></div>
+                                <span class="text-sm md:text-base text-slate-300 peer-checked:text-chinese-gold font-bold flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-dot text-xs text-transparent peer-checked:text-chinese-gold"></i>
+                                    Hadir
+                                </span>
+                            </label>
+                            
+                            <!-- Radio Tidak Hadir -->
+                            <label class="relative flex items-center justify-center p-4 bg-chinese-dark/95 border border-chinese-gold/30 rounded-xl cursor-pointer hover:bg-chinese-red/10 transition-all duration-300 group">
+                                <input type="radio" name="kehadiran" value="absen" class="sr-only peer">
+                                <div class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-chinese-gold transition-all"></div>
+                                <span class="text-sm md:text-base text-slate-300 peer-checked:text-chinese-gold font-bold flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-dot text-xs text-transparent peer-checked:text-chinese-gold"></i>
+                                    Tidak Hadir
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Form Group: Ucapan -->
+                    <div class="form-grup flex flex-col">
+                        <label for="ucapanTamu" class="text-sm font-semibold text-chinese-goldLight mb-2 flex items-center gap-2">
+                            <span>祝词</span> Ucapan & Doa Restu
+                        </label>
+                        <textarea id="ucapanTamu" required rows="4"
+                            class="bg-chinese-dark/90 border border-chinese-gold/35 focus:border-chinese-gold text-white placeholder-slate-500 rounded-xl p-4 text-sm md:text-base outline-none transition-all duration-300 resize-none font-medium"
+                            placeholder="Berikan ucapan terbaik & doa restu untuk ulang tahun ke-80 Akong..."></textarea>
+                    </div>
+
+                    <button type="submit" 
+                        class="w-full bg-gradient-to-r from-chinese-goldDark via-chinese-gold to-chinese-goldDark hover:from-chinese-gold hover:to-chinese-goldLight text-chinese-dark font-extrabold text-sm md:text-base uppercase tracking-wider py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 duration-300 flex items-center justify-center gap-2 cursor-pointer">
+                        <span>🏮 Kirim Doa Restu 🏮</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- DAFTAR UCAPAN YANG SUDAH MASUK -->
+            <div class="reveal mt-16 max-w-2xl mx-auto">
+                <h3 class="font-oriental text-xl md:text-2xl text-chinese-gold font-bold text-center mb-6 flex items-center justify-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-chinese-gold"></span>
+                    Ucapan & Doa dari Keluarga & Rekan
+                    <span class="w-1.5 h-1.5 rounded-full bg-chinese-gold"></span>
+                </h3>
+                
+                <div id="ucapan-list" class="space-y-4 max-h-[400px] overflow-y-auto pr-2">
+                    <div id="empty-state-message" class="text-center py-8 text-slate-400 text-sm italic font-medium">
+                        Belum ada ucapan. Jadilah yang pertama memberikan doa restu kepada Akong Ng Se An!
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER / AKHIR UNDANGAN -->
+    <footer class="relative py-16 px-6 text-center overflow-hidden">
+        <div class="absolute inset-x-0 bottom-0 h-32 chinese-cloud opacity-30"></div>
+        <div class="relative z-10 max-w-xl mx-auto space-y-6">
+            <p class="font-oriental text-chinese-gold text-4xl">福 禄 寿</p>
+            <p class="text-sm md:text-base text-slate-400 leading-relaxed font-medium">
+                Merupakan suatu sukacita dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada orang tua / kakek kami terkasih.
+            </p>
+            <p class="text-xs text-chinese-goldLight font-semibold tracking-widest uppercase">
+                — Hormat Kami, Keluarga Besar Ng Se An —
+            </p>
+            <div class="pt-6 border-t border-chinese-gold/10 text-[11px] text-slate-500">
+                <p>&copy; 2026 Undangan Ulang Tahun Ke-80 Akong Ng Se An. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIKA JAVASCRIPT -->
+    <script>
+        // Data Tamu Awal (Kosong 0 bawaan)
+        let dataTamu = [];
+
+        // Integrasi YouTube Iframe Player API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        var audioPlaying = false;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('ytPlayer', {
+                height: '0',
+                width: '0',
+                videoId: 'v5B4e79bmCs', // ID Video Guzheng dari URL Anda
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'loop': 1,
+                    'playlist': 'v5B4e79bmCs', // Wajib untuk looping video tunggal
+                    'rel': 0,
+                    'showinfo': 0
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            console.log("YouTube Player is ready");
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.ENDED) {
+                player.playVideo();
+            }
+        }
+
+        // Jalankan saat halaman siap
+        window.onload = function () {
+            // Ambil nama dari parameter URL jika ada (e.g., ?to=Nama+Tamu)
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestName = urlParams.get('to');
+            if (guestName) {
+                document.getElementById('guest-name').innerText = decodeURIComponent(guestName);
+            }
+
+            // Ambil dari localStorage
+            if (localStorage.getItem('rsvp_undangan_akong_v2')) {
+                dataTamu = JSON.parse(localStorage.getItem('rsvp_undangan_akong_v2'));
+            }
+
+            renderDaftarUcapan();
+            hitungMundur();
+            revealElements();
+
+            setInterval(hitungMundur, 1000);
+            window.addEventListener('scroll', revealElements);
+        }
+
+        // FUNGSI BUKA UNDANGAN (Pemicu Utama Musik Latar YouTube)
+        function openInvitation() {
+            const gate = document.getElementById('welcome-gate');
+            gate.classList.add('opacity-0', 'pointer-events-none');
+            
+            // Hapus element dari layout setelah transisi selesai
+            setTimeout(() => {
+                gate.style.display = 'none';
+            }, 1000);
+
+            // Putar audio secara langsung setelah klik
+            if (player && typeof player.playVideo === 'function') {
+                player.playVideo();
+                document.getElementById('musicIcon').classList.add('animate-spin');
+                audioPlaying = true;
+            }
+        }
+
+        // FUNGSI ANIMASI REVEAL SAAT SCROLL
+        function revealElements() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 120;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // FUNGSI COUNTDOWN (Ke 23 Agustus 2026, 17:00:00)
+        function hitungMundur() {
+            const targetDate = new Date("August 23, 2026 17:00:00").getTime();
+            const now = new Date().getTime();
+            const gap = targetDate - now;
+
+            if (gap <= 0) {
+                document.getElementById('countdown-days').innerText = "00";
+                document.getElementById('countdown-hours').innerText = "00";
+                document.getElementById('countdown-minutes').innerText = "00";
+                document.getElementById('countdown-seconds').innerText = "00";
+                return;
+            }
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            const daysText = Math.floor(gap / day);
+            const hoursText = Math.floor((gap % day) / hour);
+            const minutesText = Math.floor((gap % hour) / minute);
+            const secondsText = Math.floor((gap % minute) / second);
+
+            document.getElementById('countdown-days').innerText = daysText < 10 ? "0" + daysText : daysText;
+            document.getElementById('countdown-hours').innerText = hoursText < 10 ? "0" + hoursText : hoursText;
+            document.getElementById('countdown-minutes').innerText = minutesText < 10 ? "0" + minutesText : minutesText;
+            document.getElementById('countdown-seconds').innerText = secondsText < 10 ? "0" + secondsText : secondsText;
+        }
+
+        // FUNGSI RENDER GUESTBOOK & STATISTIK
+        function renderDaftarUcapan() {
+            const container = document.getElementById('ucapan-list');
+            container.innerHTML = '';
+
+            let totalHadir = 0;
+            let totalAbsen = 0;
+
+            if (dataTamu.length === 0) {
+                container.innerHTML = `
+                    <div id="empty-state-message" class="text-center py-8 text-slate-400 text-sm italic font-medium">
+                        Belum ada ucapan. Jadilah yang pertama memberikan doa restu kepada Akong Ng Se An!
+                    </div>
+                `;
+                document.getElementById('stat-hadir').innerText = "0";
+                document.getElementById('stat-absen').innerText = "0";
+                return;
+            }
+
+            dataTamu.forEach(item => {
+                const isHadir = item.status === 'hadir';
+                if (isHadir) totalHadir++; else totalAbsen++;
+
+                const bgStyle = isHadir ? 'border-chinese-gold/25' : 'border-slate-800 opacity-80';
+                const labelStyle = isHadir 
+                    ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30 font-bold' 
+                    : 'bg-rose-500/20 text-rose-300 border-rose-500/30 font-bold';
+
+                const cardHTML = `
+                    <div class="bg-chinese-redDark/35 border ${bgStyle} rounded-2xl p-5 shadow-md relative overflow-hidden backdrop-blur-sm animate__animated animate__fadeIn">
+                        <div class="flex justify-between items-start gap-4 mb-2">
+                            <h4 class="font-bold text-chinese-goldLight text-sm md:text-base">${escapeHTML(item.nama)}</h4>
+                            <span class="text-[10px] ${labelStyle} border px-2.5 py-0.5 rounded-full">${isHadir ? 'Hadir' : 'Tidak Hadir'}</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-slate-200 leading-relaxed italic">
+                            "${escapeHTML(item.ucapan)}"
+                        </p>
+                    </div>
+                `;
+                container.insertAdjacentHTML('afterbegin', cardHTML);
+            });
+
+            document.getElementById('stat-hadir').innerText = totalHadir;
+            document.getElementById('stat-absen').innerText = totalAbsen;
+        }
+
+        // SUBMIT GUESTBOOK FORM
+        document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const namaInput = document.getElementById('namaTamu').value.trim();
+            const ucapanInput = document.getElementById('ucapanTamu').value.trim();
+            const kehadiranRadio = document.querySelector('input[name="kehadiran"]:checked').value;
+
+            if (!namaInput || !ucapanInput) return;
+
+            const dataBaru = {
+                nama: namaInput,
+                ucapan: ucapanInput,
+                status: kehadiranRadio
+            };
+
+            dataTamu.push(dataBaru);
+            localStorage.setItem('rsvp_undangan_akong_v2', JSON.stringify(dataTamu));
+
+            document.getElementById('rsvpForm').reset();
+            renderDaftarUcapan();
+            showToastPopup();
+        });
+
+        function showToastPopup() {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-chinese-gold text-chinese-dark font-extrabold py-3 px-6 rounded-2xl shadow-xl flex items-center gap-2 border border-chinese-goldLight animate__animated animate__fadeInUp";
+            toast.innerHTML = `<i class="fa-solid fa-circle-check text-lg animate-bounce"></i> Terima kasih, ucapan Anda telah terkirim!`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.replace('animate__fadeInUp', 'animate__fadeOutDown');
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+
+        // AUDIO CONTROLLER (YouTube Player API integration)
+        function toggleMusic() {
+            const icon = document.getElementById('musicIcon');
+
+            if (!player || typeof player.playVideo !== 'function') {
+                console.log("Player not loaded yet.");
+                return;
+            }
+
+            if (audioPlaying) {
+                player.pauseVideo();
+                icon.classList.remove('animate-spin');
+                audioPlaying = false;
+            } else {
+                player.playVideo();
+                icon.classList.add('animate-spin');
+                audioPlaying = true;
+            }
+        }
+    </script>
+</body>
+</html>
